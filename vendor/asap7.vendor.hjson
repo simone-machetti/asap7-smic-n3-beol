@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Author: Simone Machetti
+// -----------------------------------------------------------------------------
+
+{
+  name: "asap7",
+  target_dir: "asap7",
+
+  upstream: {
+    url: "https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git",
+    rev: "4810cd92635eb5130cfa81a6373bdfbc5377a614",
+    only_subdir: "flow/platforms/asap7",
+  },
+
+  exclude_from_upstream: [
+    "lib/CCS",
+    "openlane",
+    "ram",
+    "drc",
+    "fakeram.cfg",
+    "lef/fakeram*",
+    "lef/fakeregfile*",
+    "lib/NLDM/fakeram*",
+    "lib/NLDM/fakeregfile*",
+    "verilog/fakeram*",
+    "verilog/fakeregfile*",
+  ]
+}

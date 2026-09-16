@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// Author: Simone Machetti
+// -----------------------------------------------------------------------------
+
+{
+  name: "asap7sc7p5t_27",
+  target_dir: "asap7sc7p5t_27",
+
+  upstream: {
+    url: "https://github.com/The-OpenROAD-Project/asap7sc7p5t_27.git",
+    rev: "adb6d0d354e76e46a782ad06498f1977257d5742",
+  },
+
+  mapping: [
+    { from: "Verilog",   to: "Verilog" },
+    { from: "LICENSE",   to: "LICENSE" },
+    { from: "README.md", to: "README.md" },
+  ]
+}
