@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <technology>
  <name>ASAP 7</name>
- <description>ASAP 7 nm Technology</description>
+ <description>ASAP 7 nm Technology, smic-n3 metal stack (M10 120/0, V10 125/0, M11 130/0, V11 135/0 added)</description>
  <dbu>0.00025</dbu>
  <base-path>./platforms/asap7/KLayout/</base-path>
  <original-base-path>.klayout/tech/asap7/</original-base-path>
@@ -21,7 +21,7 @@
   </common>
   <lefdef>
    <read-all-layers>true</read-all-layers>
-   <layer-map>layer_map('BOUNDARY : 100/0';'M1 : 19/0';'M1.LABEL : 19/2';'M1.PIN : 19/251';'M2 : 20/0';'M2.LABEL : 20/2';'M2.PIN : 20/251';'M3 : 30/0';'M3.LABEL : 30/2';'M3.PIN : 30/251';'M4 : 40/0';'M4.LABEL : 40/2';'M4.PIN : 40/251';'M5 : 50/0';'M5.LABEL : 50/2';'M5.PIN : 50/251';'M6 : 60/0';'M6.LABEL : 60/2';'M6.PIN : 60/251';'M7 : 70/0';'M7.LABEL : 70/2';'M7.PIN : 70/251';'M8 : 80/0';'M8.LABEL : 80/2';'M8.PIN : 80/251';'M9 : 90/0';'M9.LABEL : 90/2';'M9.PIN : 90/251';'V0 : 18/0';'V0.LABEL : 29/0';'V1 : 21/0';'V2 : 25/0';'V3 : 35/0';'V4 : 45/0';'V5 : 55/0';'V6 : 65/0';'V7 : 75/0';'V8 : 85/0';'V9 : 95/0';'GATE : 7/0';'COMP : 101/0';'DIEAREA : 235/0')</layer-map>
+   <layer-map>layer_map('BOUNDARY : 100/0';'M1 : 19/0';'M1.LABEL : 19/2';'M1.PIN : 19/251';'M2 : 20/0';'M2.LABEL : 20/2';'M2.PIN : 20/251';'M3 : 30/0';'M3.LABEL : 30/2';'M3.PIN : 30/251';'M4 : 40/0';'M4.LABEL : 40/2';'M4.PIN : 40/251';'M5 : 50/0';'M5.LABEL : 50/2';'M5.PIN : 50/251';'M6 : 60/0';'M6.LABEL : 60/2';'M6.PIN : 60/251';'M7 : 70/0';'M7.LABEL : 70/2';'M7.PIN : 70/251';'M8 : 80/0';'M8.LABEL : 80/2';'M8.PIN : 80/251';'M9 : 90/0';'M9.LABEL : 90/2';'M9.PIN : 90/251';'M10 : 120/0';'M10.LABEL : 120/2';'M10.PIN : 120/251';'M11 : 130/0';'M11.LABEL : 130/2';'M11.PIN : 130/251';'V0 : 18/0';'V0.LABEL : 29/0';'V1 : 21/0';'V2 : 25/0';'V3 : 35/0';'V4 : 45/0';'V5 : 55/0';'V6 : 65/0';'V7 : 75/0';'V8 : 85/0';'V9 : 95/0';'V10 : 125/0';'V11 : 135/0';'GATE : 7/0';'COMP : 101/0';'DIEAREA : 235/0')</layer-map>
    <dbu>0.00025</dbu>
    <produce-net-names>true</produce-net-names>
    <net-property-name>#1</net-property-name>
@@ -109,7 +109,9 @@
   <connection>M6,V6,M7</connection>
   <connection>M7,V7,M8</connection>
   <connection>M8,V8,M9</connection>
-  <connection>M9,V9,Pad</connection>
+  <connection>M9,V9,M10</connection>
+  <connection>M10,V10,M11</connection>
+  <connection>M11,V11,Pad</connection>
   <symbols>DrainSource='1/0 - 9/0'</symbols>
   <symbols>poly='9/0'</symbols>
   <symbols>contact='18/0'</symbols>
@@ -131,5 +133,9 @@
   <symbols>V8='85/0'</symbols>
   <symbols>M9='90/0'</symbols>
   <symbols>V9='95/0'</symbols>
+  <symbols>M10='120/0'</symbols>
+  <symbols>V10='125/0'</symbols>
+  <symbols>M11='130/0'</symbols>
+  <symbols>V11='135/0'</symbols>
  </connectivity>
 </technology>

@@ -424,9 +424,6 @@ def clone_git_repo(repo_url, clone_dir, rev='master'):
         cmd += ['-q']
     subprocess.run(cmd, check=True)
 
-    # cmd = ['git', '-C', str(clone_dir), 'submodule', 'update', '--init', '--recursive']
-    # subprocess.run(cmd, check=True)
-
     cmd = ['git', '-C', str(clone_dir), 'rev-parse', 'HEAD']
     rev = subprocess.run(cmd,
                          stdout=subprocess.PIPE,

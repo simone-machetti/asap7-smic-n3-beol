@@ -2,6 +2,7 @@
 
 # -----------------------------------------------------------------------------
 # Author: Simone Machetti
+# SPDX-License-Identifier: Apache-2.0
 # -----------------------------------------------------------------------------
 
 set -euo pipefail
@@ -23,11 +24,13 @@ done
 
 for gz in "${ASAP7}"/lib/NLDM/${UNPACK_LIBS}; do
     lib="${gz%.gz}"
-    if [ ! -f "${lib}" ] || [ "${gz}" -nt "${lib}" ]; then
+    if [ ! -f "${lib}" ] || ! gunzip -c "${gz}" | cmp -s - "${lib}"; then
         gunzip -c "${gz}" > "${lib}"
     fi
 done
 
-cp -p "${ASU}/Verilog/${OA_MODEL}" "${ASAP7}/verilog/stdcell/${OA_MODEL}"
+if ! cmp -s "${ASU}/Verilog/${OA_MODEL}" "${ASAP7}/verilog/stdcell/${OA_MODEL}"; then
+    cp -p "${ASU}/Verilog/${OA_MODEL}" "${ASAP7}/verilog/stdcell/${OA_MODEL}"
+fi
 
 echo "ready: ${ASAP7}"
